@@ -4,7 +4,7 @@ Calculation of flow field and stresses in a model for epithelial tissue with act
 The fundamental quantity of the model is the time varying anisotropic spatial distribution of actomyosin within cells, quantified by the 2nd rank tensor $\bm{M}({\bf{r}},t)$. 
 The other fields that characterise the material are local velocity ${\bf{v}}({\bf{r}}, t)$ and the local passive stress $\bm{\pi}({\bf{r}}, t)$. The total stress $\bm{\sigma}({\bf{r}}, t)$ in the material is the sum of the passive stress and an active stress proportional to $\bm{M}$ : $\bm{\sigma} = \bm{\pi} + \beta(\bm{M} - m_0\bm{I})$, where $\beta$ is the activity parameter and $m_0$ is the reference concentration for actomyosin. The actomyosin tensor evolves via
 ```
-\tau_m\overset{\circ}{\bm{M}} = \bm{I} - (\bm{I} + e^{-k_0\bm{\sigma}})\cdot\bm{M} + D\nabla^2\bm{M},
+\tau_m\overset{\circ}{\mathbf{M}} = \mathbf{I} - (\mathbf{I} + e^{-k_0\mathbf{\sigma}})\cdot\mathbf{M} + D\nabla^2\mathbf{M},
 ```
 where the over circle represents the corotational derivative $\accentset{\circ}{\bm{A}} = \partial_{t}\bm{A} + {\bf{v}}\cdot\nabla \bm{A} + \bm{\omega}\cdot\bm{A} - \bm{A}\cdot\bm{\omega}$, where $\bm{\omega} = (1/2)(\nabla {\bf{v}} - (\nabla {\bf{v}})^T)$ is the vorticity tensor. We also include ActoMyosin diffusion with diffusion constant $D$. We use a convected compressible Maxwell model for the passive stress, superimposing separate Maxwell models for compression and shear deformations, 
 ```
