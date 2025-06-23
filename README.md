@@ -1,9 +1,11 @@
 # Continuum model for an epithelial tissue
 Calculation of flow field and stresses in a model for epithelial tissue with active mechano-chemical feedback. 
 
-The model is described in my paper here: https://doi.org/10.1103/PhysRevLett.131.238301 
-
 ![GIF](https://github.com/aondoyima/mechano-chemical-model/blob/main/mov_oscstate_6x6.gif)
+
+More details in the [paper](https://doi.org/10.1103/PhysRevLett.131.238301)[^1]
+
+[^1]: Ioratim-Uba, A., Liverpool, T. B., & Henkes, S. (2023). Mechanochemical active feedback generates convergence extension in epithelial tissue. Physical Review Letters, 131(23), 238301.
 
 ## How to use
 - Input parameters and run the simulation using ```bash run_batch.sh```. 
