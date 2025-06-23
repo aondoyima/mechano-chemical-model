@@ -5,7 +5,7 @@ The model is described in my paper here: https://doi.org/10.1103/PhysRevLett.131
 ![GIF](https://github.com/aondoyima/mechano-chemical-model/blob/main/mov_oscstate_6x6.gif)
 
 ## How to use
-- Input parameters and run "main.py" using "run_batch.sh". 
+- Input parameters and run the simulation using ```bash run_batch.sh```. 
 - "main.py" carries out the numerical solution for the coupled differential equations in the model for the actomyosin tensor, passive pressure, and velocity field.
 - You can generate a movie of the simulation with "make_movie.py". The function "utils.plot_fields()" takes optional arguments - see comments in "make_movie.py"
 
