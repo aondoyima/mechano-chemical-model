@@ -6,7 +6,7 @@ The other fields that characterise the material are local velocity ${\bf{v}}({\b
 ```math
 \tau_m\overset{\circ}{\mathbf{M}} = \mathbf{I} - (\mathbf{I} + e^{-k_0\mathbf{\sigma}})\cdot\mathbf{M} + D\nabla^2\mathbf{M},
 ```
-where the over circle represents the corotational derivative $\accentset{\circ}{\mathbf{A}} = \partial_{t}\mathbf{A} + {\bf{v}}\cdot\nabla \mathbf{A} + \mathbf{\omega}\cdot\mathbf{A} - \mathbf{A}\cdot\mathbf{\omega}$, where $\mathbf{\omega} = (1/2)(\nabla {\mathbf{v}} - (\nabla {\mathbf{v}})^T)$ is the vorticity tensor. We also include ActoMyosin diffusion with diffusion constant $D$. We use a convected compressible Maxwell model for the passive stress, superimposing separate Maxwell models for compression and shear deformations, 
+where the over circle represents the corotational derivative $\overset{\circ}{\mathbf{A}} = \partial_{t}\mathbf{A} + {\bf{v}}\cdot\nabla \mathbf{A} + \mathbf{\omega}\cdot\mathbf{A} - \mathbf{A}\cdot\mathbf{\omega}$, where $\mathbf{\omega} = (1/2)(\nabla {\mathbf{v}} - (\nabla {\mathbf{v}})^T)$ is the vorticity tensor. We also include ActoMyosin diffusion with diffusion constant $D$. We use a convected compressible Maxwell model for the passive stress, superimposing separate Maxwell models for compression and shear deformations, 
 ```math
 \boldsymbol{\pi} + \tau_v\overset{\circ}{\mathbf{\pi}} = \frac{1}{2}\eta_p\text{Tr}(\dot{\mathbf{\gamma}})\mathbf{I}  + \eta_s\left(\dot{\mathbf{\gamma}} - \frac{1}{2}\text{Tr}(\dot{\mathbf{\gamma}})\mathbf{I}\right),
 ```
