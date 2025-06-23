@@ -1,17 +1,17 @@
 # Continuum model for an epithelial tissue
 Calculation of flow field and stresses in a model for epithelial tissue with active mechano-chemical feedback.
 
-The fundamental quantity of the model is the time varying anisotropic spatial distribution of actomyosin within cells, quantified by the 2nd rank tensor $\bm{M}({\bf{r}},t)$. 
+The fundamental quantity of the model is the time varying anisotropic spatial distribution of actomyosin within cells, quantified by the 2nd rank tensor $\mathbf{M}({\bf{r}},t)$. 
 The other fields that characterise the material are local velocity ${\bf{v}}({\bf{r}}, t)$ and the local passive stress $\bm{\pi}({\bf{r}}, t)$. The total stress $\bm{\sigma}({\bf{r}}, t)$ in the material is the sum of the passive stress and an active stress proportional to $\bm{M}$ : $\bm{\sigma} = \bm{\pi} + \beta(\bm{M} - m_0\bm{I})$, where $\beta$ is the activity parameter and $m_0$ is the reference concentration for actomyosin. The actomyosin tensor evolves via
-```
+```math
 \tau_m\overset{\circ}{\mathbf{M}} = \mathbf{I} - (\mathbf{I} + e^{-k_0\mathbf{\sigma}})\cdot\mathbf{M} + D\nabla^2\mathbf{M},
 ```
 where the over circle represents the corotational derivative $\accentset{\circ}{\bm{A}} = \partial_{t}\bm{A} + {\bf{v}}\cdot\nabla \bm{A} + \bm{\omega}\cdot\bm{A} - \bm{A}\cdot\bm{\omega}$, where $\bm{\omega} = (1/2)(\nabla {\bf{v}} - (\nabla {\bf{v}})^T)$ is the vorticity tensor. We also include ActoMyosin diffusion with diffusion constant $D$. We use a convected compressible Maxwell model for the passive stress, superimposing separate Maxwell models for compression and shear deformations, 
-```
-\bm{\pi} + \tau_v\accentset{\circ}{\bm{\pi}} = \frac{1}{2}\eta_p\text{Tr}(\dot{\bm{\gamma}})\bm{I}  + \eta_s\left(\dot{\bm{\gamma}} - \frac{1}{2}\text{Tr}(\dot{\bm{\gamma}})\bm{I}\right),
+```math
+\boldsymbol{\pi} + \tau_v\accentset{\circ}{\bm{\pi}} = \frac{1}{2}\eta_p\text{Tr}(\dot{\bm{\gamma}})\bm{I}  + \eta_s\left(\dot{\bm{\gamma}} - \frac{1}{2}\text{Tr}(\dot{\bm{\gamma}})\bm{I}\right),
 ```
 where $\tau_v$ is the viscous relaxation time scale, $\eta_p$ is the bulk viscosity, $\eta_s$ is the shear viscosity, and the strain rate tensor is related to the velocity field via $\dot{\bm{\gamma}} =  (1/2)(\nabla {\bf{v}} + (\nabla {\bf{v}})^T)$. The bulk and shear moduli of the system are related to the relaxation time scale and the viscosities via $\tau_v = \eta_p /B = \eta_s/\mu$. The tissue is coupled to a substrate with friction coefficient $\zeta$ via momentum balance in the over-damped limit,
-```
+```math
 \zeta{\bf{v}} = \nabla\cdot\bm{\sigma}.
 ````
 More details can be found in our [paper](https://doi.org/10.1103/PhysRevLett.131.238301)[^1]
