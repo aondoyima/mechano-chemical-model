@@ -22,8 +22,8 @@ More details can be found in our [paper](https://doi.org/10.1103/PhysRevLett.131
 
 ## How to use
 - Input parameters and run the simulation using ```bash run_batch.sh```. 
-- "main.py" carries out the numerical solution for the coupled differential equations in the model for the actomyosin tensor, passive pressure, and velocity field.
-- You can generate a movie of the simulation with "make_movie.py". The function "utils.plot_fields()" takes optional arguments - see comments in "make_movie.py"
+- ```main.py``` carries out the numerical solution for the coupled differential equations in the model for the actomyosin tensor, passive pressure, and velocity field.
+- You can generate a movie of the simulation with ```make_movie.py```. The function ```utils.plot_fields()``` takes optional arguments - see comments in ```make_movie.py```.
 
 ## Dependencies and Packages
 Outside of the packages in the standard python library, you will need these:
